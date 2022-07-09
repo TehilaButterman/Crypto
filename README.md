@@ -1,3 +1,3 @@
 # Crypto
-jQuery project
+## jQuery project
 Using HTML, CSS, Bootstrap, JavaScript, AJAX, CanvasJS
