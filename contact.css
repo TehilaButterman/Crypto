@@ -1,0 +1,186 @@
+    *,
+    *::after,
+    *::before {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-front__heading {
+        font-size: 2.1rem;
+        margin-top: .35rem;
+    }
+
+    .inside-page__heading {
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+
+    .inside-page__heading,
+    .card-front__text-view {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-top: .2rem;
+    }
+
+    .inside-page__heading--ski,
+    .card-front__text-view--ski {
+        color: dodgerblue;
+    }
+
+    .card-front__tp {
+        color: #fafbfa;
+    }
+
+    .inside-page__text {
+        color: #333;
+        font-size: 1.9rem;
+    }
+
+    .card-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-section {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card {
+        background-color: rgba(0, 0, 0, .05);
+        height: 35rem;
+        transition: all 1s ease;
+        width: 35rem;
+    }
+
+    .flip-card {
+        height: 35rem;
+        perspective: 100rem;
+        position: absolute;
+        right: 0;
+        transition: all 1s ease;
+        visibility: hidden;
+        width: 35rem;
+        z-index: 100;
+    }
+
+    .flip-card>* {
+        visibility: visible;
+    }
+
+    .flip-card__container {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        transform-origin: left;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+        width: 100%;
+    }
+
+    .card-front,
+    .card-back {
+        backface-visibility: hidden;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .card-front {
+        background-color: #fafbfa;
+        height: 35rem;
+        width: 35rem;
+    }
+
+    .card-front__tp {
+        align-items: center;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
+        display: flex;
+        flex-direction: column;
+        height: 28rem;
+        justify-content: center;
+        padding: .75rem;
+    }
+
+    .card-front__tp--ski {
+        background: linear-gradient(to bottom,
+                #47c2d7,
+                dodgerblue);
+    }
+
+    .card-front__bt {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-back {
+        background-color: #fafbfa;
+        transform: rotateY(180deg);
+    }
+
+    .video__container {
+        clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .inside-page {
+        background-color: #fafbfa;
+        box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.25);
+        height: 100%;
+        padding: 1rem;
+        position: absolute;
+        right: 0;
+        transition: all 1s ease;
+        width: 35rem;
+        z-index: 1;
+    }
+
+    .inside-page__c {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .card:hover {
+        box-shadow:
+            -.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.75);
+        width: 30rem;
+    }
+
+    .card:hover .flip-card__container {
+        transform: rotateY(-180deg);
+    }
+
+    .card:hover .inside-page {
+        box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    .me {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    #icons {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 40px;
+        justify-content: center;
+        padding: 3rem;
+    }
